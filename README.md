@@ -73,7 +73,9 @@ terdapat 2 jenis fitur yaitu fitu numerik dan fitur kategori
 
 **Fitur kategorikal**
 
+
 Mainroad
+
 ![Mainroad](mainroad.png)
 
 Guest Room
@@ -174,7 +176,8 @@ Dalam algoritma ini digunakan library scikit-learn untuk membuat model regresi b
 from sklearn.neighbors import KNeighborsRegressor
 ```
 
-terdapat parameter +`n_neighbors` : jumlah neighbor yang digunakan untuk melakukan prediksi, biasanya diatur ke nilai maksimum.
+terdapat parameter 
++`n_neighbors` : jumlah neighbor yang digunakan untuk melakukan prediksi, biasanya diatur ke nilai maksimum.
 
 ### Random Forest
 
@@ -234,7 +237,7 @@ Evaluasi model yang digunakan adalah akurasi (accuracy) dan mean squared error (
   |RF|135118786\.1627713|4494885131\.828696|
   |Boosting|897755190\.600389|3580515918\.0956063|
 
-![alt text](image.png)
+![alt text](mse.png)
 
 Hasil Prediksi
 |index|y_true|prediksi_KNN|prediksi_RF|prediksi_Boosting|
