@@ -72,22 +72,28 @@ terdapat 2 jenis fitur yaitu fitu numerik dan fitur kategori
 ![Numerik](numerik.png)
 
 **Fitur kategorikal**
+
 Mainroad
 ![Mainroad](mainroad.png)
 
 Guest Room
+
 ![Guest Room](guestroom.png)
 
 Basement
+
 ![Basement](basement.png)
 
 Hot Water Heating
+
 ![Hot Water Heating](hotwater.png)
 
 Air Conditioning
+
 ![Air Conditioning](ac.png)
 
 Preferend Area
+
 ![Preferend Area](pref.png)
 
 ### Multivariate Analysis
@@ -139,6 +145,7 @@ Encoding fitur kategori adalah proses mengubah variabel kategori menjadi bentuk 
 ### Train-Test-Split
 
 Train-test-split adalah teknik yang umum digunakan dalam machine learning untuk membagi dataset menjadi subset pelatihan (training set) dan subset pengujian (test set).
+
 ![train test](tts.png)
 
 ### Standarisasi
@@ -164,7 +171,7 @@ K-Nearest Neighbors (KNN) adalah salah satu algoritma pembelajaran mesin yang pa
 Dalam algoritma ini digunakan library scikit-learn untuk membuat model regresi berbasis K-Nearest Neighbors (KNN) .
 
 ```
-KNeighborsRegressor
+from sklearn.neighbors import KNeighborsRegressor
 ```
 
 terdapat parameter +`n_neighbors` : jumlah neighbor yang digunakan untuk melakukan prediksi, biasanya diatur ke nilai maksimum.
@@ -176,7 +183,7 @@ Random Forest adalah algoritma pembelajaran mesin yang termasuk dalam kategori e
 Dalam algoritma ini digunakan library scikit-learn untuk membuat model regresi berbasis Random Forest (RF).
 
 ```
-RandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor
 ```
 
 terdapat parameter beberapa parameter sebagai berikut:
@@ -193,7 +200,7 @@ Boosting adalah teknik ensemble learning lainnya yang bekerja dengan cara mengga
 Dalam algoritma ini digunakan library scikit-learn untuk membuat model regresi berbasis AdaBoost
 
 ```
-AdaBoostRegressor
+from sklearn.ensemble import AdaBoostRegressor
 ```
 
 terdapat parameter beberapa parameter sebagai berikut:
