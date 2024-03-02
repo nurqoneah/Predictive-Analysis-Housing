@@ -2,44 +2,45 @@
 
 ## Domain Proyek
 
-Membuat model predictive analytics (housing price prediction) menggunakan dataset dari Kaggle [Housing Dataset](https://www.kaggle.com/code/abdelrahmanramadan2/housing-price-prediction-using-linear-regression) sebagai salah satu submission Dicoding. Pada proyek ini akan diprediksi harga rumah dengan menggunakan dataset yang tersedia sebelumnya.
+Membuat model *predictive analytics (housing price prediction)* menggunakan dataset dari Kaggle [Housing Dataset](https://www.kaggle.com/code/abdelrahmanramadan2/housing-price-prediction-using-linear-regression) sebagai salah satu submission Dicoding. Pada proyek ini akan diprediksi harga rumah dengan menggunakan dataset yang tersedia sebelumnya.
 
 ### Latar Belakang
 
-Proyek ini bertujuan untuk membandingkan kinerja tiga algoritma machine learning yang berbeda, yaitu K-Nearest Neighbors (KNN), Adaboost, dan Random Forest, dalam memprediksi harga rumah. Prediksi harga rumah memiliki signifikansi penting dalam industri real estate, membantu pemilik properti, pembeli, dan pemasok informasi pasar untuk membuat keputusan yang tepat terkait investasi dan transaksi properti.
+Proyek ini bertujuan untuk membandingkan kinerja tiga algoritma machine learning yang berbeda, yaitu *K-Nearest Neighbors* (KNN), *Adaboost*, dan *Random Forest*, dalam memprediksi harga rumah. Prediksi harga rumah memiliki signifikansi penting dalam industri *real estate*, membantu pemilik properti, pembeli, dan pemasok informasi pasar untuk membuat keputusan yang tepat terkait investasi dan transaksi properti.
 
 Metode KNN adalah pendekatan berbasis instance yang menghitung jarak antara titik data untuk menentukan label kelasnya. Adaboost adalah algoritma pembelajaran ensemble yang menggabungkan beberapa model lemah menjadi satu model kuat dengan memberikan bobot yang lebih tinggi pada sampel yang salah diklasifikasikan sebelumnya. Sementara itu, Random Forest adalah algoritma pembelajaran ensemble yang membangun beberapa pohon keputusan dan menggabungkan hasil prediksi mereka.
 
 Proyek ini menggunakan dataset harga rumah yang luas dan beragam fitur seperti luas tanah, jumlah kamar, fasilitas, dan lokasi. Data tersebut kemudian dibagi menjadi subset pelatihan dan pengujian untuk mengevaluasi kinerja setiap algoritma dalam memprediksi harga rumah.
 
-Hasil proyek ini diharapkan dapat memberikan wawasan yang berharga tentang keunggulan dan kelemahan masing-masing algoritma dalam memprediksi harga rumah. Diharapkan pula hasilnya dapat membantu pemangku kepentingan di industri real estate dalam mengambil keputusan yang lebih baik berdasarkan prediksi harga rumah yang lebih akurat.
+Hasil proyek ini diharapkan dapat memberikan wawasan yang berharga tentang keunggulan dan kelemahan masing-masing algoritma dalam memprediksi harga rumah. Diharapkan pula hasilnya dapat membantu pemangku kepentingan di industri *real estate* dalam mengambil keputusan yang lebih baik berdasarkan prediksi harga rumah yang lebih akurat.
 
-![Rumah](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/rumah.png)
+
+![rumah](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/3156cdc7-56ba-4590-892b-acc9074d3a0d)
 
 Gambar 1. Rumah 
 
 
 ## Business Understanding
 
-Tujuan dari proyek ini adalah untuk mengembangkan model machine learning yang dapat memprediksi harga rumah dengan tingkat akurasi yang tinggi. Dengan melakukan analisis data yang cermat dan menggunakan teknik machine learning yang sesuai, diharapkan bahwa model yang dihasilkan dapat memberikan wawasan yang berharga bagi pemangku kepentingan di pasar properti.
+Tujuan dari proyek ini adalah untuk mengembangkan model *machine learning* yang dapat memprediksi harga rumah dengan tingkat akurasi yang tinggi. Dengan melakukan analisis data yang cermat dan menggunakan teknik *machine learning* yang sesuai, diharapkan bahwa model yang dihasilkan dapat memberikan wawasan yang berharga bagi pemangku kepentingan di pasar properti.
 
 ### Problem Statements
 
-- Bagaimana cara melakukan data preparation agar dapat digunakan dalam model machine learning?
-- Bagaimana cara menentukan nilai target variable tersebut?
+- Bagaimana cara melakukan data preparation agar dapat digunakan dalam model *machine learning*?
+- Bagaimana cara menentukan nilai target *variable* tersebut?
 - Algoritma apa yang paling baik dalam menentukan harga rumah?
 
 ### Goals
 
-- Dapat melakukan analisa data dan pengolahan data agar dapat digunakan oleh model machine learning
+- Dapat melakukan analisa data dan pengolahan data agar dapat digunakan oleh model *machine learning*
 - Dapat membuat model yang dapat memprediksi harga rumah.
 - Mengetahui algoritma yang paling efektif untuk mendata dan melakukan prediksi harga rumah untuk membantu pihak perusahaan dalam menentukan harga rumah yang sesuai.
 
 ### Solution statements
 
-- Menganalisis data dengan melakukan EDA atau Exploratory Data Analysis untuk mengetahui informasi tentang dataset dengan melakukan univariate dan multivariate analysis, dan visualisasi data.
-- Membangun model machine learning untuk bisa memprediksi harga rumah dengan menggunakan 3 algoritma machine learning yaitu K-Nearest Neighbour, Random Forest, dan AdaBoost.
-- Melakukan hyperparameter tuning untuk mendapatkan nilai parameter terbaik sehingga bisa mendapatkan model terbaik dengan menggunakan teknik Grid Search.
+- Menganalisis data dengan melakukan EDA atau Exploratory Data Analysis untuk mengetahui informasi tentang dataset dengan melakukan *univariate* dan *multivariate analysis*, dan visualisasi data.
+- Membangun model *machine learning* untuk bisa memprediksi harga rumah dengan menggunakan 3 algoritma machine learning yaitu *K-Nearest Neighbour, Random Forest*, dan *AdaBoost*.
+- Melakukan *hyperparameter tuning* untuk mendapatkan nilai parameter terbaik sehingga bisa mendapatkan model terbaik dengan menggunakan teknik Grid Search.
 
 ## Data Understanding dan Exploratory Data Analysis
 
@@ -47,26 +48,26 @@ Dataset yang digunakan dalam proyek ini merupakan data harga penjualan rumah. Da
 
 Berikut informasi pada dataset :
 
-- Dataset dengan format CSV (Comma-Seperated Values)
-- Dataset memiliki 545 record dengan 13 feature
-- Dataset memiliki 6 feature numerik dan 7 feature kategori
-- Tidak terdapat missing value dalam dataset
+- Dataset dengan format CSV (*Comma-Seperated Values*)
+- Dataset memiliki 545 record dengan 13 *feature*
+- Dataset memiliki 6 feature numerik dan 7 *feature* kategori
+- Tidak terdapat *missing value* dalam dataset
 
 ### Variabel-variabel pada Housing dataset adalah sebagai berikut:
 
-- price : merupakan harga rumah yang akan dijual
-- area : merupakan luas rumah yang tersedia
-- bedrooms : merupakan banyak kamar tidur yang tersedia
-- bathrooms : merupakan banyak toilet yang tersedia
-- stories : merupakan banyak tingkatan rumah yang ada
-- mainroad : merupakan jenis jalan utama yang terdekat dengan tempat tinggal
-- guestroom : merupakan status rumah apakah memiliki kamar tamu atau tidak
-- basement : merupakan status rumah apakah memiliki basement atau tidak
-- hotwaterheating : merupakan status rumah apakah memiliki pemanas air atau tidak
-- airconditioning : merupakan status rumah apakah memiliki air conditioning atau tidak
-- parking : merupakan status rumah apakah memiliki tempat parkir atau tidak
-- prefarea : merupakan status rumah apakah disukai atau tidak
-- furnishingstatus : merupakan status rumah apakah Furnished atau Semi-Furnished atau Unfurnished.
+- *price* : merupakan harga rumah yang akan dijual
+- *area* : merupakan luas rumah yang tersedia
+- *bedrooms* : merupakan banyak kamar tidur yang tersedia
+- *bathrooms* : merupakan banyak toilet yang tersedia
+- *stories* : merupakan banyak tingkatan rumah yang ada
+- *mainroad* : merupakan jenis jalan utama yang terdekat dengan tempat tinggal
+- *guestroom* : merupakan status rumah apakah memiliki kamar tamu atau tidak
+- *basement* : merupakan status rumah apakah memiliki basement atau tidak
+- *hotwaterheating* : merupakan status rumah apakah memiliki pemanas air atau tidak
+- *airconditioning* : merupakan status rumah apakah memiliki *air conditioning* atau tidak
+- *parking* : merupakan status rumah apakah memiliki tempat parkir atau tidak
+- *prefarea* : merupakan status rumah apakah disukai atau tidak
+- *furnishingstatus* : merupakan status rumah apakah *Furnished* atau *Semi-Furnished* atau *Unfurnished*.
 
 ### Univariate Analysis
 
@@ -75,46 +76,47 @@ Analisis univariat adalah jenis analisis statistik yang dilakukan pada satu vari
 terdapat 2 jenis fitur yaitu fitu numerik dan fitur kategori
 
 **Fitur numerik**
-![Numerik](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/numerik.png)
+
+![numerik](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/619784fb-4fd9-4c68-b98f-e550648c5926)
 
 Gambar 2. Fitur numerik
 **Fitur kategorikal**
 
-Mainroad
+*Mainroad*
 
-![Mainroad](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/mainroad.png)
+![mainroad](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/f57428ec-d05e-4715-b559-9ba783883509)
 
-Gambar 3. Univariate mainroad
+Gambar 3. *Univariate mainroad*
 
-Guest Room
+*Guest Room*
 
-![Guest Room](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/guestroom.png)
+![guestroom](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/31c8eb13-88d2-4489-90dd-7485da58fd96)
 
-Gambar 4. Univariate Guest Room
+Gambar 4. *Univariate Guest Room*
 
-Basement
+*Basement*
 
-![Basement](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/basement.png)
+![basement](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/ff7ed0f7-5e25-4b4f-9a41-fac027859e76)
 
-Gambar 5. Univariate basement
+Gambar 5. *Univariate basement*
 
-Hot Water Heating
+*Hot Water Heating*
 
-![Hot Water Heating](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/hotwater.png)
+![hotwater](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/19578fe1-0753-488d-9d72-b392abf9b0ec)
 
-Gambar 6. Univariate hot water heating
+Gambar 6. *Univariate hot water heating*
 
-Air Conditioning
+*Air Conditioning*
 
-![Air Conditioning](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/ac.png)
+![ac](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/baf805bc-6229-49b3-a20b-e6a5aec593e5)
 
-Gambar 7. Univariate ac
+Gambar 7. *Univariate ac*
 
-Preferend Area
+*Preferend Area*
 
-![Preferend Area](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/pref.png)
+![pref](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/fc503008-e138-4ab0-a300-c7b25e8bae40)
 
-Gambar 8. Univariate prefend area
+Gambar 8. *Univariate prefend area*
 
 ### Multivariate Analysis
 
@@ -123,52 +125,60 @@ Analisis multivariat adalah jenis analisis statistik yang dilakukan pada dua ata
 Dalam analisis multivariat, data dieksplorasi dan dianalisis untuk memahami hubungan antara variabel-variabel tersebut.
 
 **Fitur numerik**
-![Multivariate Numerik](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/multivariatenumerik.png)
+
+![multivariatenumerik](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/9d60002b-0ccc-4fe8-b38a-fb57b4f75d73)
 
 Gambar 9. Multivariate numerik
 
-Fitur Price dengan mainroad
-![Fitur Price dengan mainroad](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/mainprice.png)
+Fitur *Price* dengan *mainroad*
+
+![mainprice](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/553a3ca4-2e0f-47d5-9ffd-8aa1ccb9a980)
 
 Gambar 10. Multivariate price dengan mainroad
 
-Fitur Price dengan guestroom
-![Fitur Price dengan mainroad](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/guestroomprice.png)
+Fitur *Price* dengan *guestroom*
+
+![guestroomprice](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/8abf3669-7f96-4ba5-a50f-8eb1aa17a1e5)
 
 Gambar 11. Multivariate price dengan guest room 
 
-Fitur Price dengan basement
-![Fitur Price dengan mainroad](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/basementprice.png)
+Fitur *Price* dengan *basement*
+
+![basementprice](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/00a7763a-1bbc-4831-8953-226c72ac9580)
 
 Gambar 12. Multivariate price dengan basement
 
-Fitur Price dengan hot water heater
-![Fitur Price dengan mainroad](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/hotwaterprice.png)
+Fitur *Price* dengan *hot water heater*
+
+![hotwaterprice](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/f035ba38-6d34-4c27-9c5a-b1ce3635d23a)
 
 Gambar 13. Multivariate price dengan hot water heater
 
-Fitur Price dengan air conditioning
-![Fitur Price dengan mainroad](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/acprice.png)
+Fitur *Price* dengan *air conditioning*
+
+![acprice](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/d7999276-c971-4393-ab66-8c2b8786fabd)
 
 Gambar 14. Multivariate price dengan air conditioning
 
-Fitur Price dengan preferend area
-![Fitur Price dengan mainroad](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/prefprice.png)
+Fitur *Price* dengan *preferend area*
+
+![prefprice](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/7fcaa3e8-aa83-40ac-8f88-d2a84815ede5)
 
 Gambar 15. Multivariate price dengan prefend area
 
-Fitur Price dengan furnishing status
-![Fitur Price dengan mainroad](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/furprice.png)
+Fitur *Price* dengan *furnishing status*
+
+![furprice](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/ee60a2c8-7a1c-47ac-a77e-1bb7a58b5a8e)
 
 Gambar 16. Multivariate price dengan furnishing status
 
 ## Data Preparation
 
-Persiapan data (data preparation) adalah tahap penting dalam analisis data yang melibatkan persiapan dataset agar siap digunakan untuk analisis lebih lanjut.
+Persiapan data (*data preparation*) adalah tahap penting dalam analisis data yang melibatkan persiapan dataset agar siap digunakan untuk analisis lebih lanjut.
 
 ### Encoding Fitur Kategori
 
-Encoding fitur kategori adalah proses mengubah variabel kategori menjadi bentuk yang dapat diproses oleh algoritma machine learning, yang umumnya memerlukan input numerik.
+*Encoding* fitur kategori adalah proses mengubah variabel kategori menjadi bentuk yang dapat diproses oleh algoritma *machine learning*, yang umumnya memerlukan input numerik.
 
 | index | price   | area | bedrooms | bathrooms | stories | mainroad | guestroom | basement | hotwaterheating | airconditioning | parking | prefarea | furnished | semi-furnished |
 | ----- | ------- | ---- | -------- | --------- | ------- | -------- | --------- | -------- | --------------- | --------------- | ------- | -------- | --------- | -------------- |
@@ -182,9 +192,10 @@ Tabel 1. Hasil Encoding feeture kategori
 
 ### Train-Test-Split
 
-Train-test-split adalah teknik yang umum digunakan dalam machine learning untuk membagi dataset menjadi subset pelatihan (training set) dan subset pengujian (test set).
+*Train-test-split* adalah teknik yang umum digunakan dalam *machine learning* untuk membagi dataset menjadi subset pelatihan (*training set*) dan subset pengujian (*test set*).
 
-![train test](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/tts.png)
+![tts](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/a5069e60-3ac9-44c4-be05-e5c3117ac2e6)
+
 
 Gambar 17. Train test split
 
@@ -204,19 +215,19 @@ Tabel 2. Hasil standarisasi feature numerik
 
 ## Modeling
 
-Algoritma Penelitian ini melakukan pemodelan dengan 3 algoritma, yaitu K-Nearest Neighbour, Random Forest, dan Boosting
+Algoritma Penelitian ini melakukan pemodelan dengan 3 algoritma, yaitu *K-Nearest Neighbour, Random Forest, dan Boosting*
 
 ### K-Nearest Neighbour
 
-K-Nearest Neighbors (KNN) adalah salah satu algoritma pembelajaran mesin yang paling sederhana dan mudah dipahami. Prinsip dasar dari KNN adalah memprediksi kelas atau nilai target suatu observasi berdasarkan mayoritas kelas dari K observasi terdekat di antara data latihnya.
+*K-Nearest Neighbors* (KNN) adalah salah satu algoritma pembelajaran mesin yang paling sederhana dan mudah dipahami. Prinsip dasar dari KNN adalah memprediksi kelas atau nilai target suatu observasi berdasarkan mayoritas kelas dari K observasi terdekat di antara data latihnya.
 
-Dalam algoritma ini digunakan library scikit-learn untuk membuat model regresi berbasis K-Nearest Neighbors (KNN) .
+Dalam algoritma ini digunakan *library scikit-learn* untuk membuat model regresi berbasis *K-Nearest Neighbors* (KNN) .
 
 ```
 from sklearn.neighbors import KNeighborsRegressor
 ```
 
-terdapat parameter `n_neighbors` : jumlah neighbor yang digunakan untuk melakukan prediksi, biasanya diatur ke nilai maksimum.
+terdapat parameter `n_neighbors` : jumlah *neighbor* yang digunakan untuk melakukan prediksi, biasanya diatur ke nilai maksimum.
 
 **kelebihan**
 + Sederhana: Mudah dipahami dan diimplementasikan.
@@ -231,9 +242,9 @@ terdapat parameter `n_neighbors` : jumlah neighbor yang digunakan untuk melakuka
 
 ### Random Forest
 
-Random Forest adalah algoritma pembelajaran mesin yang termasuk dalam kategori ensemble learning. Ensemble learning adalah teknik yang menggabungkan beberapa model pembelajaran mesin untuk meningkatkan kinerja dan stabilitas prediksi. Random Forest menggabungkan konsep "bagging" dengan pohon keputusan.
+*Random Forest* adalah algoritma pembelajaran mesin yang termasuk dalam kategori ensemble learning. *Ensemble learning* adalah teknik yang menggabungkan beberapa model pembelajaran mesin untuk meningkatkan kinerja dan stabilitas prediksi. *Random Forest* menggabungkan konsep "bagging" dengan pohon keputusan.
 
-Dalam algoritma ini digunakan library scikit-learn untuk membuat model regresi berbasis Random Forest (RF).
+Dalam algoritma ini digunakan *library scikit-learn* untuk membuat model regresi berbasis Random Forest (RF).
 
 ```
 from sklearn.ensemble import RandomForestRegressor
@@ -242,24 +253,24 @@ from sklearn.ensemble import RandomForestRegressor
 terdapat parameter beberapa parameter sebagai berikut:
 
 - `n_estimators` : yang menentukan jumlah tree yang dibuat oleh RF.
-- `max_depth`: kedalaman maksimum setiap pohon keputusan dalam ensemble. Untuk mengontrol kompleksitas setiap pohon dan dapat membantu mencegah overfitting.
+- `max_depth`: kedalaman maksimum setiap pohon keputusan dalam ensemble. Untuk mengontrol kompleksitas setiap pohon dan dapat membantu mencegah *overfitting*.
 - `random_state` : untuk menetapkan keadaan acak, sehingga hasil pembangunan model akan konsisten jika dijalankan berulang kali.
 - `n_jobs` : menentukan jumlah pekerjaan yang akan dieksekusi secara paralel saat melatih model.
 
 **kelebihan**
-+ Random Forest dapat menangani dataset dengan kelas yang tidak seimbang dengan baik, karena menerapkan voting mayoritas untuk klasifikasi.
-+ Random Forest tidak memiliki banyak parameter untuk disetel, sehingga mudah diimplementasikan dan digunakan.
++ *Random Forest* dapat menangani dataset dengan kelas yang tidak seimbang dengan baik, karena menerapkan *voting* mayoritas untuk klasifikasi.
++ *Random Forest* tidak memiliki banyak parameter untuk disetel, sehingga mudah diimplementasikan dan digunakan.
 
 **kekurangan**
 + Lebih sulit untuk diinterpretasikan daripada model linear sederhana karena keberagaman pohon keputusan yang terlibat.
-+ Random Forest bisa memerlukan sumber daya komputasi yang cukup besar, terutama pada dataset yang besar dengan banyak pohon atau fitur.
++ *Random Forest* bisa memerlukan sumber daya komputasi yang cukup besar, terutama pada dataset yang besar dengan banyak pohon atau fitur.
 + Jika data memiliki ketergantungan yang kuat antar fitur, Random Forest mungkin tidak optimal karena tidak mampu menangkap pola-pola kompleks seperti halnya model yang lebih fleksibel.
 
 ### Boosting
 
-Boosting adalah teknik ensemble learning lainnya yang bekerja dengan cara menggabungkan sejumlah model pembelajaran mesin yang lemah (weak learner) menjadi satu model yang kuat (strong learner). Prinsip dasar dari boosting adalah mempelajari sekumpulan model secara berurutan, di mana setiap model mencoba untuk memperbaiki kesalahan prediksi model sebelumnya.
+*Boosting* adalah teknik *ensemble learning* lainnya yang bekerja dengan cara menggabungkan sejumlah model pembelajaran mesin yang lemah (*weak learner*) menjadi satu model yang kuat (*strong learner*). Prinsip dasar dari *boosting* adalah mempelajari sekumpulan model secara berurutan, di mana setiap model mencoba untuk memperbaiki kesalahan prediksi model sebelumnya.
 
-Dalam algoritma ini digunakan library scikit-learn untuk membuat model regresi berbasis AdaBoost
+Dalam algoritma ini digunakan *library scikit-learn* untuk membuat model regresi berbasis AdaBoost
 
 ```
 from sklearn.ensemble import AdaBoostRegressor
@@ -272,17 +283,17 @@ terdapat parameter beberapa parameter sebagai berikut:
 
 **kelebihan**
 + Sering menghasilkan model yang memiliki kinerja yang sangat baik
-+ Mengatasi Overfitting: Dengan fokus pada sampel yang salah diklasifikasikan pada iterasi sebelumnya, Adaboosting cenderung mengurangi overfitting, terutama jika digunakan dengan model dasar yang sederhana.
-+ Adaboosting efektif dalam menangani dataset dengan kelas yang tidak seimbang karena memberikan bobot yang lebih tinggi pada sampel yang salah diklasifikasikan.
++ Mengatasi *Overfitting*: Dengan fokus pada sampel yang salah diklasifikasikan pada iterasi sebelumnya, *Adaboosting* cenderung mengurangi overfitting, terutama jika digunakan dengan model dasar yang sederhana.
++ *Adaboosting* efektif dalam menangani dataset dengan kelas yang tidak seimbang karena memberikan bobot yang lebih tinggi pada sampel yang salah diklasifikasikan.
 
 **kekurangan**
-+ Sensitif terhadap Noise dan Outliers
++ Sensitif terhadap *Noise* dan *Outliers*
 + Membutuhkan Waktu Pembelajaran yang Lama
 + Tidak Cocok untuk Data dengan Banyak Fitur
 
 ### Hyperparameter Tuning
 
-Hyperparameter tuning adalah proses mengambil nilai terbaik dari hyperparameter yang tidak langsung diketahui
+Hyperparameter tuning adalah proses mengambil nilai terbaik dari *hyperparameter* yang tidak langsung diketahui
 
 Untuk melakukan hyperparameter tuning, kita dapat menggunakan sklearn.model_selection.GridSearchCV. Maka dapat dihasilkan parameter terbaik sebagai berikut
 |index|model|best_score|best_params|
@@ -291,11 +302,11 @@ Untuk melakukan hyperparameter tuning, kita dapat menggunakan sklearn.model_sele
 |1|random_forest|0\.6683750141592485|\{'max_depth': 16, 'n_estimators': 100, 'n_jobs': 1, 'random_state': 33\}|
 |2|boosting|0\.5742617820131491|\{'learning_rate': 0\.1, 'random_state': 11\}|
 
-Tabel 3. Hasil hyperparameter tuning
+Tabel 3. Hasil *hyperparameter tuning*
 
 ## Evaluation
 
-Evaluasi model yang digunakan adalah mean squared error (MSE). MSE adalah singkatan dari Mean Squared Error. Ini adalah salah satu metrik evaluasi yang umum digunakan dalam masalah regresi untuk mengukur seberapa baik model memprediksi nilai yang kontinu. Secara matematis, MSE dapat dihitung dengan rumus berikut: 
+Evaluasi model yang digunakan adalah *mean squared error* (MSE). MSE adalah singkatan dari *Mean Squared Error*. Ini adalah salah satu metrik evaluasi yang umum digunakan dalam masalah regresi untuk mengukur seberapa baik model memprediksi nilai yang kontinu. Secara matematis, MSE dapat dihitung dengan rumus berikut: 
 
 MSE = $\frac{1}{n} \Sigma_{i=1}^n({y}-\hat{y})^2$
 
@@ -306,7 +317,7 @@ dimana:
 
 MSE mengukur rata-rata dari kuadrat perbedaan antara prediksi model dan nilai sebenarnya. Semakin rendah nilai MSE, semakin baik model dalam memprediksi nilai sebenarnya. Sebaliknya, nilai MSE yang lebih tinggi menunjukkan bahwa model cenderung melakukan prediksi yang buruk.
 
-Hasil dari evaluasi tersebut adalah:
+Hasil dari evaluasi dengan data housing adalah:
   
 |index|train|test|
 |---|---|---|
@@ -316,9 +327,18 @@ Hasil dari evaluasi tersebut adalah:
 
 Tabel 4. Hasil evaluasi matriks mse
 
-![alt text](https://github.com/nurqoneah/Predictive-Analysis-Housing/blob/main/mse.png)
+![mse](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/7cd22473-5022-4212-93e9-70b14a26c67e)
+
 
 Gambar 18. evaluasi matriks mse
+
+Dari hasil evaluasi menggunakan *Mean Squared Error* (MSE), algoritma yang memiliki kinerja terbaik dalam menentukan harga rumah adalah algoritma *Boosting*, diikuti oleh Random Forest (RF), dan yang terakhir adalah *K-Nearest Neighbors* (KNN).
+
+Dalam kasus ini:
+
+*AdaBoosting* memiliki MSE terendah, menunjukkan bahwa model yang dihasilkan oleh algoritma *Boosting* memiliki kesesuaian yang lebih baik dengan data dalam menentukan harga rumah.
+*Random Forest* (RF) memiliki MSE lebih tinggi dari *Boosting* tetapi lebih rendah dibandingkan dengan KNN. Ini menunjukkan bahwa RF menghasilkan model yang cukup baik dalam menentukan harga rumah, tetapi tidak sebaik *Boosting*.
+*K-Nearest Neighbors* (KNN) memiliki MSE tertinggi di antara ketiga algoritma tersebut, menunjukkan kinerja yang lebih rendah dalam menentukan harga rumah dibandingkan dengan RF dan *Boosting*.
 
 Hasil Prediksi
 |index|y_true|prediksi_KNN|prediksi_RF|prediksi_Boosting|
@@ -327,8 +347,7 @@ Hasil Prediksi
 
 Tabel 5. Hasil prediksi 3 algoritma
 
-Dari hasil evaluasi di atas dapat kita lihat bahwa Algoritma AdaBoost Regression yang memiliki akurasi terbaik dan loss terkecil dibanding algiritma lainnya.
-
+Dari hasil proyek yang telah dilakukan maka dapat disimpulkan bahwa model dapat melakukan prediksi harga rumah, dan algoritma terbaik untuk menentukan harga rumah dengan dataset housing adalah algoritma *AdaBoost*.
 
 ## Referensi 
 + Putri, V. A. P., Prasetijo, A. B., & Eridani, D. (2022). Perbandingan Kinerja Algoritme Naïve Bayes dan K-Nearest Neighbor (KNN) untuk Prediksi Harga Rumah. Transmisi: Jurnal Ilmiah Teknik Elektro, 24(4), 162-171. https://ejournal.undip.ac.id/index.php/transmisi/article/view/47129/0
