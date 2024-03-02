@@ -8,9 +8,9 @@ Membuat model *predictive analytics (housing price prediction)* menggunakan data
 
 Proyek ini bertujuan untuk membandingkan kinerja tiga algoritma machine learning yang berbeda, yaitu *K-Nearest Neighbors* (KNN), *Adaboost*, dan *Random Forest*, dalam memprediksi harga rumah. Prediksi harga rumah memiliki signifikansi penting dalam industri *real estate*, membantu pemilik properti, pembeli, dan pemasok informasi pasar untuk membuat keputusan yang tepat terkait investasi dan transaksi properti.
 
-Metode KNN adalah pendekatan berbasis instance yang menghitung jarak antara titik data untuk menentukan label kelasnya. Adaboost adalah algoritma pembelajaran ensemble yang menggabungkan beberapa model lemah menjadi satu model kuat dengan memberikan bobot yang lebih tinggi pada sampel yang salah diklasifikasikan sebelumnya. Sementara itu, Random Forest adalah algoritma pembelajaran ensemble yang membangun beberapa pohon keputusan dan menggabungkan hasil prediksi mereka.
+Metode KNN adalah pendekatan berbasis *instance* yang menghitung jarak antar data untuk menentukan label kelasnya. *Adaboost* adalah algoritma *ensemble learning* yang menggabungkan beberapa model klasifikasi lemah (*weak learner*) menjadi model kuat (*strong learner*). Sementara itu, *Random Forest* adalah algoritma *ensemble learning* yang membangun kumpulan pohon keputusan (decision tree) acak.
 
-Proyek ini menggunakan dataset harga rumah yang luas dan beragam fitur seperti luas tanah, jumlah kamar, fasilitas, dan lokasi. Data tersebut kemudian dibagi menjadi subset pelatihan dan pengujian untuk mengevaluasi kinerja setiap algoritma dalam memprediksi harga rumah.
+Proyek ini menggunakan dataset *housing* dengan fitur seperti harga rumah, luas tanah, jumlah kamar, jumlah kamar mandi, dan lokasi. Data tersebut kemudian dibagi menjadi subset pelatihan dan pengujian untuk mengevaluasi kinerja setiap algoritma dalam memprediksi harga rumah.
 
 Hasil proyek ini diharapkan dapat memberikan wawasan yang berharga tentang keunggulan dan kelemahan masing-masing algoritma dalam memprediksi harga rumah. Diharapkan pula hasilnya dapat membantu pemangku kepentingan di industri *real estate* dalam mengambil keputusan yang lebih baik berdasarkan prediksi harga rumah yang lebih akurat.
 
@@ -22,35 +22,35 @@ Gambar 1. Rumah
 
 ## Business Understanding
 
-Tujuan dari proyek ini adalah untuk mengembangkan model *machine learning* yang dapat memprediksi harga rumah dengan tingkat akurasi yang tinggi. Dengan melakukan analisis data yang cermat dan menggunakan teknik *machine learning* yang sesuai, diharapkan bahwa model yang dihasilkan dapat memberikan wawasan yang berharga bagi pemangku kepentingan di pasar properti.
+Tujuan dari proyek ini adalah untuk mengembangkan model *machine learning* yang dapat memprediksi harga rumah dengan tingkat akurasi yang tinggi. Dengan melakukan analisis data yang cermat dan menggunakan teknik *machine learning* yang sesuai, diharapkan bahwa model yang dihasilkan dapat memberikan wawasan yang berharga bagi pemangku kepentingan di pasar properti atau industri *real estate* .
 
 ### Problem Statements
 
-- Bagaimana cara melakukan data preparation agar dapat digunakan dalam model *machine learning*?
-- Bagaimana cara menentukan nilai target *variable* tersebut?
+- Bagaimana cara melakukan *data preparation* agar dapat digunakan dalam model *machine learning*?
+- Bagaimana cara menentukan harga rumah yang sesuai?
 - Algoritma apa yang paling baik dalam menentukan harga rumah?
 
 ### Goals
 
 - Dapat melakukan analisa data dan pengolahan data agar dapat digunakan oleh model *machine learning*
 - Dapat membuat model yang dapat memprediksi harga rumah.
-- Mengetahui algoritma yang paling efektif untuk mendata dan melakukan prediksi harga rumah untuk membantu pihak perusahaan dalam menentukan harga rumah yang sesuai.
+- Mengetahui algoritma yang paling efektif untuk melakukan prediksi harga rumah yang dapat membantu pihak perusahaan dalam menentukan harga rumah yang sesuai.
 
 ### Solution statements
 
-- Menganalisis data dengan melakukan EDA atau Exploratory Data Analysis untuk mengetahui informasi tentang dataset dengan melakukan *univariate* dan *multivariate analysis*, dan visualisasi data.
-- Membangun model *machine learning* untuk bisa memprediksi harga rumah dengan menggunakan 3 algoritma machine learning yaitu *K-Nearest Neighbour, Random Forest*, dan *AdaBoost*.
-- Melakukan *hyperparameter tuning* untuk mendapatkan nilai parameter terbaik sehingga bisa mendapatkan model terbaik dengan menggunakan teknik Grid Search.
+- Menganalisis data dengan melakukan EDA atau *Exploratory Data Analysis* untuk mengetahui informasi tentang dataset dengan melakukan *univariate* dan *multivariate analysis*, dan visualisasi data.
+- Membangun model *machine learning* untuk bisa memprediksi harga rumah dengan menggunakan 3 algoritma *machine learning* yaitu *K-Nearest Neighbour, Random Forest*, dan *AdaBoost*.
+- Melakukan *hyperparameter tuning* untuk mendapatkan nilai parameter terbaik dengan menggunakan teknik Grid Search.
 
 ## Data Understanding dan Exploratory Data Analysis
 
-Dataset yang digunakan dalam proyek ini merupakan data harga penjualan rumah. Dataset ini dapat diunduh di Contoh: [Housing Dataset](https://www.kaggle.com/datasets/ashydv/housing-dataset/data).
+Dataset yang digunakan dalam proyek ini merupakan data harga penjualan rumah. Dataset ini dapat diunduh di: [Housing Dataset](https://www.kaggle.com/datasets/ashydv/housing-dataset/data).
 
 Berikut informasi pada dataset :
 
 - Dataset dengan format CSV (*Comma-Seperated Values*)
 - Dataset memiliki 545 record dengan 13 *feature*
-- Dataset memiliki 6 feature numerik dan 7 *feature* kategori
+- Dataset memiliki 6 *feature* numerik dan 7 *feature* kategori
 - Tidak terdapat *missing value* dalam dataset
 
 ### Variabel-variabel pada Housing dataset adalah sebagai berikut:
@@ -73,8 +73,6 @@ Berikut informasi pada dataset :
 
 Analisis univariat adalah jenis analisis statistik yang dilakukan pada satu variabel tunggal dalam sebuah dataset. Tujuan dari analisis univariat adalah untuk memahami karakteristik atau distribusi dari variabel tersebut secara terpisah, tanpa memperhatikan hubungan dengan variabel lain dalam dataset.
 
-terdapat 2 jenis fitur yaitu fitu numerik dan fitur kategori
-
 **Fitur numerik**
 
 ![numerik](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/619784fb-4fd9-4c68-b98f-e550648c5926)
@@ -86,7 +84,7 @@ Gambar 2. Fitur numerik
 
 ![mainroad](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/f57428ec-d05e-4715-b559-9ba783883509)
 
-Gambar 3. *Univariate mainroad*
+Gambar 3. *Univariate main road*
 
 *Guest Room*
 
@@ -174,8 +172,6 @@ Gambar 16. Multivariate price dengan furnishing status
 
 ## Data Preparation
 
-Persiapan data (*data preparation*) adalah tahap penting dalam analisis data yang melibatkan persiapan dataset agar siap digunakan untuk analisis lebih lanjut.
-
 ### Encoding Fitur Kategori
 
 *Encoding* fitur kategori adalah proses mengubah variabel kategori menjadi bentuk yang dapat diproses oleh algoritma *machine learning*, yang umumnya memerlukan input numerik.
@@ -192,7 +188,7 @@ Tabel 1. Hasil Encoding feeture kategori
 
 ### Train-Test-Split
 
-*Train-test-split* adalah teknik yang umum digunakan dalam *machine learning* untuk membagi dataset menjadi subset pelatihan (*training set*) dan subset pengujian (*test set*).
+*Train-test-split* adalah teknik yang umum digunakan dalam *machine learning* untuk membagi dataset menjadi subset pelatihan (*training set*) dan subset pengujian (*test set*). *Train* data digunakan sebagai *training model* dan *test* data digunakan sebagai validasi apakah model sudah akurat atau belum. Di proyek ini, digunakan *splitting dataset* 90:10, di mana 90% untuk *training* dan 10% untuk *testing*. Proporsi ini memberikan proporsi yang sangat besar untuk pelatihan, yang dapat membantu model belajar dengan baik. 
 
 ![tts](https://github.com/nurqoneah/Predictive-Analysis-Housing/assets/89116610/a5069e60-3ac9-44c4-be05-e5c3117ac2e6)
 
@@ -201,7 +197,7 @@ Gambar 17. Train test split
 
 ### Standarisasi
 
-Standarisasi mengubah skala data sehingga memiliki mean nol dan deviasi standar satu
+Pada dataset "housing", fitur-fitur numerik memiliki skala yang berbeda-beda. Dengan standarisasi, setiap fitur akan memiliki rata-rata nol dan standar deviasi satu, sehingga memastikan bahwa distribusi nilai setiap fitur seragam. Hal ini memungkinkan model untuk belajar dengan lebih baik dari dataset.
 
 | index | area                 | bedrooms             | bathrooms            | stories              | parking             |
 | ----- | -------------------- | -------------------- | -------------------- | -------------------- | ------------------- |
@@ -227,7 +223,7 @@ Dalam algoritma ini digunakan *library scikit-learn* untuk membuat model regresi
 from sklearn.neighbors import KNeighborsRegressor
 ```
 
-terdapat parameter `n_neighbors` : jumlah *neighbor* yang digunakan untuk melakukan prediksi, biasanya diatur ke nilai maksimum.
+terdapat parameter `n_neighbors` : jumlah *neighbor* yang digunakan untuk melakukan prediksi.
 
 **kelebihan**
 + Sederhana: Mudah dipahami dan diimplementasikan.
@@ -306,7 +302,7 @@ Tabel 3. Hasil *hyperparameter tuning*
 
 ## Evaluation
 
-Evaluasi model yang digunakan adalah *mean squared error* (MSE). MSE adalah singkatan dari *Mean Squared Error*. Ini adalah salah satu metrik evaluasi yang umum digunakan dalam masalah regresi untuk mengukur seberapa baik model memprediksi nilai yang kontinu. Secara matematis, MSE dapat dihitung dengan rumus berikut: 
+Evaluasi model yang digunakan adalah MSE. MSE adalah singkatan dari *Mean Squared Error*. MSE adalah salah satu metrik evaluasi yang umum digunakan dalam masalah regresi untuk mengukur seberapa baik model memprediksi nilai yang kontinu. Secara matematis, MSE dapat dihitung dengan rumus berikut: 
 
 MSE = $\frac{1}{n} \Sigma_{i=1}^n({y}-\hat{y})^2$
 
@@ -350,6 +346,6 @@ Tabel 5. Hasil prediksi 3 algoritma
 Dari hasil proyek yang telah dilakukan maka dapat disimpulkan bahwa model dapat melakukan prediksi harga rumah, dan algoritma terbaik untuk menentukan harga rumah dengan dataset housing adalah algoritma *AdaBoost*.
 
 ## Referensi 
-+ Putri, V. A. P., Prasetijo, A. B., & Eridani, D. (2022). Perbandingan Kinerja Algoritme Naïve Bayes dan K-Nearest Neighbor (KNN) untuk Prediksi Harga Rumah. Transmisi: Jurnal Ilmiah Teknik Elektro, 24(4), 162-171. https://ejournal.undip.ac.id/index.php/transmisi/article/view/47129/0
-+ Prianti, A. I., Santoso, R., & Hakim, A. R. (2020). Perbandingan Metode K-Nearest Neighbor dan Adaptive Boosting pada Kasus Klasifikasi Multi Kelas. Gaussian, 9(3), 346-354. https://ejournal3.undip.ac.id/index.php/gaussian/article/download/28924/24520
++ V. A. P. Putri, A. B. Prasetijo, and D. Eridani, "*Perbandingan Kinerja Algoritme Naïve Bayes dan K-Nearest Neighbor (KNN) untuk Prediksi Harga Rumah,*" Transmisi: Jurnal Ilmiah Teknik Elektro, vol. 24, no. 4, pp. 162-171, 2022. [Online]. Available: https://ejournal.undip.ac.id/index.php/transmisi/article/view/47129/0https://ejournal.undip.ac.id/index.php/transmisi/article/view/47129/0
++ A. I. Prianti, R. Santoso, and A. R. Hakim, "*Perbandingan Metode K-Nearest Neighbor dan Adaptive Boosting pada Kasus Klasifikasi Multi Kelas,*" Gaussian, vol. 9, no. 3, pp. 346-354, 2020. [Online]. Available: https://ejournal3.undip.ac.id/index.php/gaussian/article/download/28924/24520
 
